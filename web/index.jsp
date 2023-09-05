@@ -31,9 +31,6 @@
                 <input type="submit" value="Limpar"/>
             </form>
 
-   <%--      <c:if test="${not empty financiamento.valorFinanciado and not empty financiamento.taxaJuros and not empty financiamento.custoMensal and not empty financiamento.prazoTotal}">
-        </c:if> --%>
-
         <c:if test="${not empty erro}">
             <span style="color: red;"> ${erro} </span>
         </c:if>

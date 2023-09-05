@@ -38,28 +38,28 @@ public class ControleFinanciamento extends HttpServlet {
         
         String valor = request.getParameter("valor");
         if (valor != null && valor.trim().length() > 0) {
-                valorFinanciado = Float.parseFloat(request.getParameter(valor));
+            valorFinanciado = Float.parseFloat(request.getParameter(valor));
         } else {
             sessao.setAttribute("erro", "O valor do financiamento nao foi informado. Favor preencher o campo.");
         }
         
         String taxa = request.getParameter("taxa");
-        if (taxa != null && taxa.trim().length() > 0) {
-                taxaJuros = Float.parseFloat(request.getParameter(taxa));
+        if (taxa != null && valor.trim().length() > 0) {
+            taxaJuros = Float.parseFloat(request.getParameter(taxa));
         } else {
             sessao.setAttribute("erro", "A taxa de juros nao foi informada. Favor preencher o campo.");
         }
         
         String custo = request.getParameter("custo");
-        if (custo != null && custo.trim().length() > 0) {
-                custoMensal = Float.parseFloat(request.getParameter(custo));
+        if (custo != null && valor.trim().length() > 0) {
+            custoMensal = Float.parseFloat(request.getParameter(custo));
         } else {
             sessao.setAttribute("erro", "O custo mensal nao foi informado. Favor preencher o campo.");
         }
         
         String prazo = request.getParameter("prazo");
-        if (prazo != null && prazo.trim().length() > 0) {
-                prazoTotal = Float.parseFloat(request.getParameter(prazo));
+        if (prazo != null && valor.trim().length() > 0) {
+            prazoTotal = Float.parseFloat(request.getParameter(prazo));
         } else {
             sessao.setAttribute("erro", "O prazo de pagamento nao foi informado. Favor preencher o campo.");
         }
